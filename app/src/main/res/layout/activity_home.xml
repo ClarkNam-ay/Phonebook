@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#27FAFA"
+    android:backgroundTint="#27FAFA"
+    tools:context=".Home">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="Add Contacts"
+        android:onClick="AddClick"
+        android:src="@drawable/custom_input_add"
+        android:tint="#070707"
+        app:backgroundTint="#D9D9D9"
+        app:fabCustomSize="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913"
+        app:maxImageSize="35dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.FloatingActionButton" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="769dp"
+        android:layout_height="798dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/group_3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/phonebookRV"
+        android:layout_width="333dp"
+        android:layout_height="563dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginBottom="81dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/row_contact_item" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="324dp"
+        android:layout_height="51dp"
+        android:layout_margin="8dp"
+
+        android:layout_marginStart="334dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="216dp"
+        android:background="@drawable/search_view_bg"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.634" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="215dp"
+        app:layout_constraintBottom_toTopOf="@+id/phonebookRV"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/blackline" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="99dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="448dp"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="My Contacts"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/deleteAll"
+        android:layout_width="30dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="477dp"
+        android:layout_marginEnd="223dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/delete_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

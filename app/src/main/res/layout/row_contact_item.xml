@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#D0FFCC"
+        android:backgroundTint="#D0FFCC">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contact_image"
+            android:layout_width="87dp"
+            android:layout_height="99dp"
+            android:padding="5dp"
+            android:src="@drawable/user_5"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="165dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="36dp"
+            android:layout_toEndOf="@+id/contact_image"
+            android:layout_toStartOf="@id/edit"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:text="Contact Name"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/mobile_number"
+            android:layout_width="165dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/contact_image"
+            android:layout_toStartOf="@id/edit"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:text="Mobile Number"
+            android:textColor="#A7A1A1"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="46dp"
+            android:src="@drawable/edit" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/trash" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
